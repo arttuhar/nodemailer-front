@@ -1,0 +1,63 @@
+.formcontainer {
+	background-color: #222;
+	margin: 100px auto;
+	width: 90%;
+}
+
+.formcontainer form {
+	width: 100%;
+	padding: 10px;
+}
+
+.formcontainer label {
+	display: block;
+	letter-spacing: 0.1rem;
+	color: #fff;
+	margin: 3px;
+}
+
+.formcontainer input,
+.formcontainer textarea {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+	border: none;
+}
+
+.formitem {
+	margin: 10px 0;
+}
+
+.messagesent {
+	color: #fff;
+	text-align: center;
+	letter-spacing: 0.1rem;
+	margin: 10px auto;
+	display: none;
+}
+
+.messagesentshow {
+	display: block;
+}
+
+.formbutton {
+	width: 100%;
+	text-align: center;
+}
+
+.formbutton button {
+	width: 150px;
+	position: relative;
+	font-size: 18px;
+	letter-spacing: 0.1rem;
+	padding: 5px 10px;
+	margin-top: 5px;
+	border: 1px solid transparent;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.formbutton button:hover {
+	background-color: #999;
+}

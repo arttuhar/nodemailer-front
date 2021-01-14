@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
+import Form from "./components/Form";
 
 function App() {
 	return (
-		<div className="App">
-			<h1>Works?</h1>
-		</div>
+		<React.Fragment>
+			<Form />
+		</React.Fragment>
 	);
 }
 
