@@ -75,13 +75,13 @@ export default class Form extends Component {
 	render() {
 		return (
 			<div className="formcontainer">
-				<form>
+				<form onSubmit={this.submitMessage}>
 					<div className="formitem">
 						<label htmlFor="firstname">First name</label>
 						<input
 							type="text"
 							name="firstname"
-							classname="firstname"
+							className="firstname"
 							placeholder="First name"
 							value={this.state.firstname}
 							onChange={this.handleFirstname}
@@ -92,7 +92,7 @@ export default class Form extends Component {
 						<input
 							type="text"
 							name="lastname"
-							classname="lastname"
+							className="lastname"
 							placeholder="Last name"
 							value={this.state.lastname}
 							onChange={this.handleLastname}
@@ -103,24 +103,31 @@ export default class Form extends Component {
 						<input
 							type="text"
 							name="email"
-							classname="email"
+							className="email"
 							placeholder="Email"
+							required
 							value={this.state.email}
 							onChange={this.handleEmail}
 						/>
 					</div>
-					<div classname="messagearea formitem">
+					<div className="messagearea formitem">
 						<label htmlFor="message">Message</label>
 						<textarea
 							name="message"
 							cols="30"
 							rows="5"
 							placeholder="Enter your message"
+							onChange={this.handleMessage}
 							value={this.state.message}
-							onchance={this.handleMessage}
 						></textarea>
 					</div>
-					<div className="messagesent">Message has been sent..</div>
+					<div
+						className={
+							this.state.sent ? "messagesent messagesentshow" : "messagesent"
+						}
+					>
+						Message has been sent..
+					</div>
 					<div className="formbutton">
 						<button type="submit">Send</button>
 					</div>
